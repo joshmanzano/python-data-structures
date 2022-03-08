@@ -1,11 +1,12 @@
-from data_structures import Node, LinkedList 
-from test_structures import test_linked_list
+from data_structures import TreeNode, Stack, Queue 
 
-green_line = LinkedList()
-test_result = 'Passed!' if test_linked_list(green_line) else 'Failed!'
-print(f'Testing linked list implementation... {test_result}')
-green_line.add_to_head('Guting')
-print(green_line)
-green_line.add_to_head('Taipower')
-green_line.add_to_head('Gongguan')
-print(green_line)
+root = TreeNode('Josh')
+left_child = TreeNode('Manzano')
+right_child = TreeNode('Capule')
+left_child.add_child('Hello')
+left_child.add_child('Hello2')
+right_child.add_child('Hi')
+right_child.add_child('Hi2')
+root.add_child(left_child)
+root.add_child(right_child)
+root.dfs()
